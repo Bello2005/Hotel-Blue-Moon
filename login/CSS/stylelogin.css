@@ -1,0 +1,297 @@
+body {
+    background: rgb(146, 145, 145);
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+
+#X {
+    width: 135px; /* Cambiar el ancho a 75px o ajusta el tamaño que desees */
+    height: 135px; /* Cambiar el alto a 65px o ajusta el tamaño que desees */
+    border-radius: 20px; /* Aumentar el radio de borde para hacerlo más redondo */
+    margin-left: 10px; /* Ajustar el margen izquierdo según tu preferencia */
+    margin-right: 30px;
+    margin: 20 px;
+}
+
+
+div {
+    display: flex;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#interactivo {
+    color: rgb(65, 65, 65);
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+#interactivo {
+    display: block;
+    border-radius: 25px;
+    width: 25px;
+    height: 25px;
+}
+
+#interactivo:hover {
+    border: 2px solid rgb(235, 231, 231) right;
+    color: rgb(163, 163, 163);
+}
+
+#titulo {
+    color: rgb(22, 22, 22);
+    text-align: center;
+    font-size: 30px;
+}
+
+
+
+#imagen2 {
+    width: 35px;
+    height: 30px;
+    padding-right: 10px;
+}
+
+
+
+
+
+#imagen3 {
+    width: 35px;
+    height: 30px;
+    padding-right: 10px;
+}
+
+#titulo3 {
+    color: grey;
+}
+
+#menu1 a:hover {
+    display: block;
+    color: rgb(41, 41, 41);
+}
+
+#menu2 a:hover {
+    display: block;
+    color: rgb(41, 41, 41);
+}
+
+#titulo4 {
+    color: #181717;
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+
+
+h2::before {
+    left: -140px;
+}
+
+h2::after {
+    right: -140px;
+}
+
+h2::after, h2::before {
+    display: flex;
+}
+
+form {
+    margin: 0 auto;
+    size: 20px;
+}
+
+
+
+#usuario {
+    width: 35px;
+    height: 30px;
+    padding-right: 10px;
+}
+
+/* Estilo básico para la barra de navegación */
+header {
+    background-color: #200a8f;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Cambiar el estilo del enlace cuando se pasa el mouse por encima */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Alineación del contenido del encabezado */
+header {
+    display: left;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Otras propiedades de estilo según sea necesario */
+
+body {
+    background: linear-gradient(45deg, #0071A4, #0C58F3, #7c27cc, #00A3E0, #005C99, #2F7D6D, rgb(171, 13, 195));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ... (tu CSS existente) ... */
+
+/* Contenedor principal para el menú y el formulario de registro */
+#menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgb(255, 255, 255);
+    width: 900px;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 30px; /* Añade espacio interior al contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login,
+#registro {
+    flex: 1;
+}
+
+#login {
+    margin-right: 20px;
+}
+
+/* Contenedor para botones de inicio de sesión */
+#login {
+    background-color: #E6E6E6; /* Cambia el color de fondo */
+    border-radius: 10px; /* Añade bordes redondeados */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor para botones de registro */
+#registro {
+    background-color: #F6F6F6; /* Cambia el color de fondo */
+    border-radius: 30px; /* Añade bordes redondeados */
+    padding: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo de botones de inicio de sesión */
+#menu1 a {
+    display: flex;
+    align-items: center;
+    border: 2px solid #E0E0E0;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 5px;
+    color: #252525;
+    text-decoration: none;
+}
+
+/* Estilo de botones de registro */
+#registro button {
+    background-color: #72ceff;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#registro button:hover {
+    background-color: #b2d7ff;
+}
+
+/* Cambia el color de fondo al hacer clic en el botón */
+#registro button:active {
+    background-color: #ffffff; /* Cambia el color de fondo al hacer clic */
+}
+
+/* Estilo de los campos de entrada */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #E0E0E0;
+    border-radius: 5px;
+    margin: 5px 0; /* Modifica el margen aquí para separar los campos verticalmente */
+    font-size: 16px;
+}
+
+#botonIngresar {
+    background-color: #77b9ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0; /* Modifica el margen aquí para separar el botón del último campo de entrada */
+}
+
+#botonIngresar:hover{
+    background-color: #b2d7ff
+}
+
+#t1tle {
+    align-items: flex-start;
+    background-color: rgb(255, 255, 255);
+    width: 900px;
+    height: auto;
+    border: red solid;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 30px; /* Añade espacio interior al contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

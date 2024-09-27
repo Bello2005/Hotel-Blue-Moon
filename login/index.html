@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <!-- Agrega los estilos de Slick Carousel -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <!-- Agrega los estilos del tema predeterminado de Slick Carousel -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <title>Blue Moon Hotel</title>
+    <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-color: #192841 !important; /* Color azul oscuro similar al blue moon */
+  color: white; /* Color del texto */
+}
+
+
+
+
+img {
+  max-width: 100%;
+  max-height: 100vh; /* Tamaño máximo de la imagen */
+}
+
+
+
+#resaltar,#blue-moon{
+  color: rgb(29, 29, 202);
+  font-family: 'Edu TAS Beginner', cursive;
+}
+
+#lugar{
+  font-family: 'Edu TAS Beginner', cursive;
+}
+
+.video-container {
+  margin-left: 300px;
+  position: relative;
+  width: 100%; /* Ajusta el ancho según tus necesidades */
+  max-width: 890px; /* Ancho máximo del contenedor del video */
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  background-image: url('img/hotel.png'); /* URL de tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Capa negra difuminada */
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  text-align: left;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.btn-reserva {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff5733;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.btn-reserva:hover {
+  background-color: #ff2600; /* Cambia el color al pasar el ratón */
+}
+
+
+footer {
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+.newsletter,
+.payment-methods {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form#input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="email"] {
+  flex: 1;
+  margin: 0 10px 0 0;
+  padding: 10px;
+}
+
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li {
+  margin: 10px;
+}
+
+.suscribirse{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  text-decoration: none; /* Elimina la decoración de enlace */
+  border: none;
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer;
+  text-align: center;
+}
+
+.suscribirse:hover {
+  background-color: #0056b3; /* Cambia el color al pasar el ratón */
+}
+
+.custom-input {
+  border: 1px solid #007bff; /* Color del borde azul */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 10px;
+  width: 100%; /* Ocupa el 100% del ancho del contenedor */
+}
+
+/* Nav */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #192841; /* Color azul oscuro similar al blue moon */
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: #192841; /* Color azul oscuro similar al blue moon */
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.hotel-logo img,
+#obama {
+  margin-top: 20px; /* Ajuste del espacio superior para centrar */
+  width: 150px; /* Tamaño del logo circular */
+  height: 150px;
+  border-radius: 50%; /* Forma de círculo para el logo */
+  margin-bottom: 20px;
+  border: 3px solid transparent;
+  animation: border-color-change 5s infinite; /* Animación de cambio de color del borde */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#obama {
+  width: 120px;
+  height: 110px;
+}
+
+.quote {
+  margin-top: 50px;
+  font-size: 30px; /* Tamaño de letra grande para la cita */
+  font-family: 'Edu TAS Beginner', cursive;
+}
+
+.author {
+  margin-top: 40px;
+  font-size: 38px; /* Tamaño de letra para el nombre de la persona */
+  margin-top: 10px;
+  font-family: 'Edu TAS Beginner', cursive;
+}
+
+@keyframes border-color-change {
+  0% {
+    border-color: rgb(255, 0, 0); /* Rojo */
+  }
+  25% {
+    border-color: rgb(0, 255, 0); /* Verde */
+  }
+  50% {
+    border-color: rgb(0, 0, 255); /* Azul */
+  }
+  75% {
+    border-color: rgb(255, 255, 0); /* Amarillo */
+  }
+  100% {
+    border-color: rgb(255, 0, 255); /* Magenta */
+  }
+}
+
+
+.galeria {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh; /* O ajusta la altura según tus necesidades */
+}
+
+.imagen {
+  flex: 1;
+  margin: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+  filter: brightness(50%); /* Añade un fondo negro difuminado */
+}
+
+.texto-descriptivo {
+  position: absolute;
+  bottom: 10px; /* Ajusta la posición vertical */
+  left: 10px; /* Ajusta la posición horizontal */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/********/
+.section-container-reykjavik {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.content-container-reykjavik {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s, transform 1.5s;
+}
+
+.image-container-reykjavik,
+.text-container-reykjavik {
+  flex: 1;
+}
+
+.image-container-reykjavik {
+  text-align: right;
+  margin-right: 20px; /* Espaciado entre la imagen y la línea vertical */
+}
+
+.image-container-reykjavik img {
+  max-width: 100%;
+  height: auto;
+}
+
+.separator-reykjavik {
+  width: 2px; /* Ancho de la línea vertical */
+  height: 80%; /* Altura de la línea vertical */
+  background-color: #333; /* Color de la línea vertical */
+  margin: 0 20px; /* Espaciado entre la línea vertical y el texto */
+  opacity: 0;
+  transform: scaleX(0);
+  transition: opacity 1.5s, transform 1.5s;
+}
+
+.text-container-reykjavik {
+  text-align: left;
+}
+
+.text-container-reykjavik h2 {
+  font-size: 2em; /* Tamaño del título */
+  margin-bottom: 10px;
+}
+
+.text-container-reykjavik p {
+  font-size: 1.2em; /* Tamaño del texto */
+}
+
+.section-container-reykjavik.show .content-container-reykjavik {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-container-reykjavik.show .separator-reykjavik {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/****/
+
+.section-container-losangeles {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.content-container-losangeles {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s, transform 1.5s;
+}
+
+.image-container-losangeles,
+.text-container-losangeles {
+  flex: 1;
+}
+
+.image-container-losangeles {
+  text-align: right;
+  margin-right: 20px; /* Espaciado entre la imagen y la línea vertical */
+}
+
+.image-container-losangeles img {
+  max-width: 100%;
+  height: auto;
+}
+
+.separator-losangeles {
+  width: 2px; /* Ancho de la línea vertical */
+  height: 80%; /* Altura de la línea vertical */
+  background-color: #333; /* Color de la línea vertical */
+  margin: 0 20px; /* Espaciado entre la línea vertical y el texto */
+  opacity: 0;
+  transform: scaleX(0);
+  transition: opacity 1.5s, transform 1.5s;
+}
+
+.text-container-losangeles {
+  text-align: left;
+}
+
+.text-container-losangeles h2 {
+  font-size: 2em; /* Tamaño del título */
+  margin-bottom: 10px;
+}
+
+.text-container-losangeles p {
+  font-size: 1.2em; /* Tamaño del texto */
+}
+
+.section-container-losangeles.show .content-container-losangeles {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-container-losangeles.show .separator-losangeles {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+#mensaje-error {
+  color: red;
+  font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+  <header class="fixed-header">
+    <div class="logo">Blue Moon</div>
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+    <nav class="menu" id="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reserva.html">Reservación</a></li>
+            <li><a href="info.html">Acerca de Nosotros</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+      <section class="hero">
+        <div class="background-image"></div>
+        <div class="content">
+          <h1>Bienvenido al <a id="blue-moon">Blue Moon Hotel</a></h1>
+          <p id="lugar">Un lugar de lujo para tu estancia perfecta</p>
+          <a href="reserva.html" class="btn-reserva">Haz tu Reservación</a>
+        </div>
+      </section>
+      
+      <div class="video-container">
+        <video autoplay muted loop>
+            <source src="video/titulo_en_slow_AdobeExpress (1).mp4" type="video/mp4">
+            Tu navegador no admite el elemento de video.
+        </video>
+    </div>
+
+    <div class="galeria">
+      <div class="imagen">
+          <img src="img/Suite.jpeg" alt="Imagen 1">
+          <div class="texto-descriptivo"><h1>Nuestra preciosa suite presidencial</h1></div>
+      </div>
+      <div class="imagen">
+          <img src="img/lobby.jpeg" alt="Imagen 2">
+          <div class="texto-descriptivo"><h1>Siente la comodidad de nuestro Lobby</h1></div>
+      </div>
+  </div>
+</div>
+
+   <!-- Sección para la sede en Reikiavik -->
+   <div class="section-container-reykjavik" id="animated-section-reykjavik">
+    <div class="content-container-reykjavik">
+      <div class="image-container-reykjavik">
+        <img src="img/Reikiavik.jpg" alt="Descripción de la imagen">
+      </div>
+      <div class="separator-reykjavik"></div>
+      <div class="text-container-reykjavik">
+        <h2>Nuestra Sede De Reikiavik</h2>
+        <p>Descubre nuestra sede en Reikiavik, donde la majestuosidad de la naturaleza se encuentra con la innovación moderna. Sumérgete en la experiencia única de esta vibrante ciudad, entre glaciares y auroras boreales. Ven y únete a nosotros para vivir momentos inolvidables en la capital de Islandia.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección para la sede en Los Ángeles -->
+  <div class="section-container-losangeles" id="animated-section-losangeles">
+    <div class="content-container-losangeles">
+      <div class="image-container-losangeles">
+        <img src="img/Los Angeles.jpg" alt="Descripción de la imagen">
+      </div>
+      <div class="separator-losangeles"></div>
+      <div class="text-container-losangeles">
+        <h2>Nuestra Sede En Los Ángeles</h2>
+        <p>Sumérgete en la energía inigualable de Los Ángeles, donde el sol brilla de manera eterna y las oportunidades son infinitas. Descubre nuestra sede en el corazón de esta ciudad icónica, donde la creatividad se fusiona con la innovación. Únete a nosotros para vivir la experiencia única de Los Ángeles.</p>
+      </div>
+    </div>
+  </div>
+
+  </main>
+  <footer>
+    <div class="newsletter">
+      <h3><b>PROMOCIONES EXCLUSIVAS EN TU EMAIL</b></h3>
+      <p>Haz parte de nuestro grupo #Viajeros #Despegar</p>
+      <form id="input">
+        <input type="email" placeholder="Ingresa tu correo electrónico" required>
+        <a class="suscribirse" href="/login.html">suscribirse</a>
+      </form>
+    </div>
+    <div class="payment-methods">
+      <h3>PAGA SEGURO CON NUESTROS MEDIOS DE PAGO</h3>
+      <ul>
+        <li><img src="img/tc.png" alt="TC"></li>
+        <li><img src="img/PSE.png" alt="PSE"></li>
+
+      </ul>
+    </div>
+  </footer>
+  
+        <!-- Footer -->
+  <footer>
+    © 2023 Blue Moon Hotel | Todos los derechos reservados
+  </footer>
+  
+<!-- Agrega la biblioteca jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!-- Agrega la biblioteca Slick Carousel -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- Otros scripts -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/JS/script.js"></script>
+  <script>
+    /*Navvar*/
+    document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const menu = document.getElementById('menu');
+
+    menuIcon.addEventListener('click', function() {
+        menu.style.display = (menu.style.display === 'block' || menu.style.display === '') ? 'none' : 'block';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (!event.target.matches('#menu-icon') && !event.target.matches('#menu')) {
+            menu.style.display = 'none';
+        }
+    });
+});
+
+
+
+
+
+////////////////////////////////
+  // Inicializa el carrusel
+  $(document).ready(function(){
+    $('.carousel').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+  });
+
+    // Script para manejar el evento del botón
+    $(document).ready(function(){
+      $("#menu-toggle").click(function(){
+        $("#navbar-menu").toggle();
+      });
+    });
+
+    //////////
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var video = document.getElementById('background-video');
+      var videoContainer = document.querySelector('.video-container');
+  
+      function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+      }
+  
+      function handleVisibility() {
+        if (isElementInViewport(videoContainer)) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      }
+  
+      // Reproducir el video cuando se desplaza hacia abajo
+      document.addEventListener('scroll', handleVisibility);
+  
+      // Reproducir el video cuando la página se carga si el video está visible
+      handleVisibility();
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuIcon = document.getElementById('menu-icon');
+      const menu = document.getElementById('menu');
+  
+      menuIcon.addEventListener('click', function() {
+          menu.style.display = (menu.style.display === 'block' ? 'none' : 'block');
+      });
+  
+      window.addEventListener('click', function(event) {
+          if (!event.target.matches('#menu-icon') && !event.target.matches('#menu')) {
+              menu.style.display = 'none';
+          }
+      });
+  });
+  
+  
+  /*----------------------------------------------------------------*/
+      /****** */
+
+        // Script para añadir la clase 'show' cuando la sección es visible en la pantalla
+    document.addEventListener("DOMContentLoaded", function() {
+      var animatedSectionReykjavik = document.getElementById('animated-section-reykjavik');
+      var sectionRectReykjavik = animatedSectionReykjavik.getBoundingClientRect();
+      var windowHeight = window.innerHeight;
+
+      if (sectionRectReykjavik.top < windowHeight && sectionRectReykjavik.bottom >= 0) {
+        animatedSectionReykjavik.classList.add('show');
+      }
+
+      window.addEventListener('scroll', function() {
+        var sectionRectReykjavik = animatedSectionReykjavik.getBoundingClientRect();
+        if (sectionRectReykjavik.top < windowHeight && sectionRectReykjavik.bottom >= 0) {
+          animatedSectionReykjavik.classList.add('show');
+        }
+      });
+    });
+
+    /****/
+
+        // Script para añadir la clase 'show' cuando la sección es visible en la pantalla
+        document.addEventListener("DOMContentLoaded", function() {
+          var animatedSectionLosAngeles = document.getElementById('animated-section-losangeles');
+          var sectionRectLosAngeles = animatedSectionLosAngeles.getBoundingClientRect();
+          var windowHeight = window.innerHeight;
+    
+          if (sectionRectLosAngeles.top < windowHeight && sectionRectLosAngeles.bottom >= 0) {
+            animatedSectionLosAngeles.classList.add('show');
+          }
+    
+          window.addEventListener('scroll', function() {
+            var sectionRectLosAngeles = animatedSectionLosAngeles.getBoundingClientRect();
+            if (sectionRectLosAngeles.top < windowHeight && sectionRectLosAngeles.bottom >= 0) {
+              animatedSectionLosAngeles.classList.add('show');
+            }
+          });
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-color: #192841 !important; /* Color azul oscuro similar al blue moon */
+  color: white; /* Color del texto */
+}
+
+
+
+
+img {
+  max-width: 100%;
+  max-height: 100vh; /* Tamaño máximo de la imagen */
+}
+
+
+
+#resaltar,#blue-moon{
+  color: rgb(29, 29, 202);
+  font-family: 'Edu TAS Beginner', cursive;
+}
+
+#lugar{
+  font-family: 'Edu TAS Beginner', cursive;
+}
+
+.video-container {
+  margin-left: 300px;
+  position: relative;
+  width: 100%; /* Ajusta el ancho según tus necesidades */
+  max-width: 890px; /* Ancho máximo del contenedor del video */
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  background-image: url('/img/hotel.png'); /* URL de tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Capa negra difuminada */
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  text-align: left;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.btn-reserva {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff5733;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.btn-reserva:hover {
+  background-color: #ff2600; /* Cambia el color al pasar el ratón */
+}
+
+
+footer {
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+.newsletter,
+.payment-methods {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form#input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="email"] {
+  flex: 1;
+  margin: 0 10px 0 0;
+  padding: 10px;
+}
+
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li {
+  margin: 10px;
+}
+
+.suscribirse{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  text-decoration: none; /* Elimina la decoración de enlace */
+  border: none;
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer;
+  text-align: center;
+}
+
+.suscribirse:hover {
+  background-color: #0056b3; /* Cambia el color al pasar el ratón */
+}
+
+.custom-input {
+  border: 1px solid #007bff; /* Color del borde azul */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 10px;
+  width: 100%; /* Ocupa el 100% del ancho del contenedor */
+}
+
+/* Nav */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #192841; /* Color azul oscuro similar al blue moon */
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: #192841; /* Color azul oscuro similar al blue moon */
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.hotel-logo img,
+#obama {
+  margin-top: 20px; /* Ajuste del espacio superior para centrar */
+  width: 150px; /* Tamaño del logo circular */
+  height: 150px;
+  border-radius: 50%; /* Forma de círculo para el logo */
+  margin-bottom: 20px;
+  border: 3px solid transparent;
+  animation: border-color-change 5s infinite; /* Animación de cambio de color del borde */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#obama {
+  width: 120px;
+  height: 110px;
+}
+
+.quote {
+  margin-top: 50px;
+  font-size: 30px; /* Tamaño de letra grande para la cita */
+  font-family: 'Edu TAS Beginner', cursive;
+}
+
+.author {
+  margin-top: 40px;
+  font-size: 38px; /* Tamaño de letra para el nombre de la persona */
+  margin-top: 10px;
+  font-family: 'Edu TAS Beginner', cursive;
+}
+
+@keyframes border-color-change {
+  0% {
+    border-color: rgb(255, 0, 0); /* Rojo */
+  }
+  25% {
+    border-color: rgb(0, 255, 0); /* Verde */
+  }
+  50% {
+    border-color: rgb(0, 0, 255); /* Azul */
+  }
+  75% {
+    border-color: rgb(255, 255, 0); /* Amarillo */
+  }
+  100% {
+    border-color: rgb(255, 0, 255); /* Magenta */
+  }
+}
+
+
+.galeria {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh; /* O ajusta la altura según tus necesidades */
+}
+
+.imagen {
+  flex: 1;
+  margin: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+  filter: brightness(50%); /* Añade un fondo negro difuminado */
+}
+
+.texto-descriptivo {
+  position: absolute;
+  bottom: 10px; /* Ajusta la posición vertical */
+  left: 10px; /* Ajusta la posición horizontal */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/********/
+.section-container-reykjavik {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.content-container-reykjavik {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s, transform 1.5s;
+}
+
+.image-container-reykjavik,
+.text-container-reykjavik {
+  flex: 1;
+}
+
+.image-container-reykjavik {
+  text-align: right;
+  margin-right: 20px; /* Espaciado entre la imagen y la línea vertical */
+}
+
+.image-container-reykjavik img {
+  max-width: 100%;
+  height: auto;
+}
+
+.separator-reykjavik {
+  width: 2px; /* Ancho de la línea vertical */
+  height: 80%; /* Altura de la línea vertical */
+  background-color: #333; /* Color de la línea vertical */
+  margin: 0 20px; /* Espaciado entre la línea vertical y el texto */
+  opacity: 0;
+  transform: scaleX(0);
+  transition: opacity 1.5s, transform 1.5s;
+}
+
+.text-container-reykjavik {
+  text-align: left;
+}
+
+.text-container-reykjavik h2 {
+  font-size: 2em; /* Tamaño del título */
+  margin-bottom: 10px;
+}
+
+.text-container-reykjavik p {
+  font-size: 1.2em; /* Tamaño del texto */
+}
+
+.section-container-reykjavik.show .content-container-reykjavik {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-container-reykjavik.show .separator-reykjavik {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/****/
+
+.section-container-losangeles {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.content-container-losangeles {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s, transform 1.5s;
+}
+
+.image-container-losangeles,
+.text-container-losangeles {
+  flex: 1;
+}
+
+.image-container-losangeles {
+  text-align: right;
+  margin-right: 20px; /* Espaciado entre la imagen y la línea vertical */
+}
+
+.image-container-losangeles img {
+  max-width: 100%;
+  height: auto;
+}
+
+.separator-losangeles {
+  width: 2px; /* Ancho de la línea vertical */
+  height: 80%; /* Altura de la línea vertical */
+  background-color: #333; /* Color de la línea vertical */
+  margin: 0 20px; /* Espaciado entre la línea vertical y el texto */
+  opacity: 0;
+  transform: scaleX(0);
+  transition: opacity 1.5s, transform 1.5s;
+}
+
+.text-container-losangeles {
+  text-align: left;
+}
+
+.text-container-losangeles h2 {
+  font-size: 2em; /* Tamaño del título */
+  margin-bottom: 10px;
+}
+
+.text-container-losangeles p {
+  font-size: 1.2em; /* Tamaño del texto */
+}
+
+.section-container-losangeles.show .content-container-losangeles {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-container-losangeles.show .separator-losangeles {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+#mensaje-error {
+  color: red;
+  font-weight: bold;
+}

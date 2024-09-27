@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #0071A4, #0C58F3, #7c27cc, #00A3E0, #005C99, #2F7D6D, rgb(171, 13, 195));
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        #contenido {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #registro-container {
+            background-color: #ffffff;
+            padding: 30px; /* Ajusta el padding según sea necesario */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Ajusta el ancho según sea necesario */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .input-container {
+            margin-bottom: 20px; /* Aumenta el espacio entre campos */
+        }
+
+        .logo {
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 100px; /* Ajusta el tamaño del logo */
+            border-radius: 50%;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px; /* Aumenta el padding de los campos */
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #0066cc;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        #mensaje-error {
+            color: #ff0000;
+            margin-top: 10px;
+        }
+
+        #inicio-sesion-texto {
+            margin-top: auto;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #inicio-sesion-texto a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        #inicio-sesion-texto a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+
+    <script>
+        // Función para obtener el valor del mensaje de éxito de la URL por su nombre
+        function obtenerParametroUrl(nombre) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(nombre);
+        }
+
+        // Función para mostrar el mensaje de éxito
+        function mostrarMensajeExito() {
+            var mensajeExito = obtenerParametroUrl('mensaje');
+            if (mensajeExito) {
+                // Mostrar mensaje de éxito
+                alert(mensajeExito);
+                // Agregar botón para continuar
+                var botonContinuar = document.createElement("button");
+                botonContinuar.innerHTML = "Continuar";
+                botonContinuar.addEventListener("click", function() {
+                    // Redirigir a la página de inicio de sesión
+                    window.location.href = "http://localhost/login/login.html";
+                });
+                document.body.appendChild(botonContinuar);
+            }
+        }
+
+        // Llamar a la función para mostrar el mensaje de éxito
+        mostrarMensajeExito();
+    </script>
+</head>
+<body>
+    <section id="contenido">
+        <div id="registro-container">
+            <div class="logo">
+                <img src="img/Logo.jpg" alt="Logo">
+            </div>
+            <form action="verify/verificar_registro.php" method="POST">
+                <div class="input-container">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                </div>
+                <div class="input-container">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" name="correo" id="correo" placeholder="correo@example.com" required>
+                </div>
+                <div class="input-container">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" class="form-control" name="contrasena" id="floatingPassword" required placeholder="Contraseña">
+                </div>
+                <button type="submit" id="botonRegistrar">Registrar</button>
+            </form>
+            <div id="inicio-sesion-texto">
+                ¿Ya tiene una cuenta? <a href="http://localhost/login/login.html">Iniciar sesión aquí</a>.
+            </div>
+        </div>
+    </section>
+</body>
+</html>
